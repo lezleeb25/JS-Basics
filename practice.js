@@ -68,17 +68,17 @@ foo( 1, 2, 3 ); // 1, 2, and 3 are the arguments
 
 
   //Answer Here
-false
-0 (zero)
-"" (empty string)
-null
-undefined
-NaN (a special Number value meaning Not-a-Number!)
-// double equals
-var c = (false == 0); // true
-var d = (false == ""); // true
-var e = (0 == ""); // true
-console.log(null == undefined);
+// false
+// 0 (zero)
+// "" (empty string)
+// null
+// undefined
+// NaN (a special Number value meaning Not-a-Number!)
+// // double equals
+// var c = (false == 0); // true
+// var d = (false == ""); // true
+// var e = (0 == ""); // true
+// console.log(null == undefined);
 
 //Next Problem
 
@@ -87,14 +87,14 @@ console.log(null == undefined);
 //Create a function called myName that returns your name
 
   //Code Here
-var myName = function(name){
-	return name;
+var myName = function(){
+	return "Lezlee";
 }
-myName("Lezlee");
+
 //Now save the function definition of myName into a new variable called newMyName
 
   //Code Here
-var newMyName = myName("Lezlee");
+var newMyName = myName(myName);
 //Now alert the result of invoking newMyName
 alert(newMyName);
 
@@ -102,24 +102,20 @@ alert(newMyName);
 //Next problem
 
 
-
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
 var outerFn = function(){
-	var name = "Lezlee";
-	return (function() {
-
-	})();
+	return myName();
 }
 
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-var innerFn = (function (name){alert(name)})
+var innerFn = outerFn();
 
 //Now invoke innerFn.
-('Lezlee');
+innerFn;
 
 
 

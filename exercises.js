@@ -1,3 +1,25 @@
+var parts = sentence.split();
+var longestIndex = -1;
+var longestWord = 0;
+
+for(var i=0; i < parts.length; i++){
+    if(parts[i].length > longestWord){
+        longestWord = parts[i].length;
+        longestIndex = i;
+    }
+}
+
+alert("longest word is " + parts[longestIndex] + ": " + longestWord + " characters");
+
+
+// //////////
+
+
+
+
+
+
+
 var a = 5;
 var b = -1;
 
